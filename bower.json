@@ -2,7 +2,7 @@
   "name": "browser-update",
   "version": "3.0.0",
   "description": "Remind users to update their browser in an unobtrusive way.",
-  "main": "dist/browser-update-npm.js",
+  "main": "dist/browser-update.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Graffino/browser-update.git"
@@ -12,8 +12,8 @@
     "web"
   ],
   "files": [
-    "dist/browser-update-npm.js",
-    "dist/browser-update-npm-core.js"
+    "dist/browser-update.js",
+    "dist/browser-update-core.js"
   ],
   "author": "Graffino",
   "license": "MIT",
