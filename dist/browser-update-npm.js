@@ -429,11 +429,6 @@ var $buo_show = function () {
     }
     op.url_permanent_hide = op.url_permanent_hide || ("#");
 
-    op.already_shown = document.cookie.indexOf("browserupdateorg=pause") > -1;
-
-    if (!op.test && (!op.notified || op.already_shown))
-        return;  
-
     function busprintf() {
         var args = arguments;
         var data = args[0];
