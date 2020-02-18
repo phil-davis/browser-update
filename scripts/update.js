@@ -229,7 +229,7 @@ op=window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
-op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
+op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//bestvpn.org/outdatedbrowser/en";
 op.apiver=op.api||op.c||-1;
 op.jsv=$bu_.version;
 
@@ -271,10 +271,6 @@ op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
-
-if (Math.random()*1000<1 && !op.test && !op.nostatistics) {//for every 1000th user collect anonymous statistics on which browser is used
-    var i = new Image();    i.src="//browser-update.org/browserstat?jsv="+op.jsv;
-}
 
 op.test=test||op.test||location.hash==="#test-bu";
 

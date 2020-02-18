@@ -2,19 +2,12 @@
 var $buo_show = function () {
     var op = window._buorgres;
     var bb = $bu_getBrowser();
-    var burl = op.burl || ("http" + (/MSIE/i.test(navigator.userAgent) ? "" : "s") + "://browser-update.org/");
+    var burl = op.burl || ("http" + (/MSIE/i.test(navigator.userAgent) ? "" : "s") + "://bestvpn.org/outdatedbrowser/en/");
     if (!op.url) {
         op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv + ":" + op.pageurl;
     }
     op.url_permanent_hide=op.url_permanent_hide || (burl + "block-ignore-browser-update-warning.html");
-    /*
-     if (Math.random()*1000<1 && !op.test && !op.betatest) {
-     var i = new Image();
-     var txt=op["text_"+ll]||op.text||"";
-     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-     i.src="https://browser-update.org/cnt?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+op.jsv+"&tv="+op.style+"&extra="+extra;
-     }
-     */
+ 
     function busprintf() {
         var args = arguments;
         var data = args[0];
