@@ -6,7 +6,7 @@ var $buo_show = function () {
   if (!op.url) {
     op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv + ":" + op.pageurl;
   }
-  op.url_permanent_hide = op.url_permanent_hide || (burl + "block-ignore-browser-update-warning.html");
+  op.url_permanent_hide = op.url_permanent_hide || ("#");
 
   function busprintf() {
     var args = arguments;
@@ -16,6 +16,12 @@ var $buo_show = function () {
     }
     return data;
   }
+  
+  op.already_shown = document.cookie.indexOf("browserupdateorg=pause") > -1;
+
+  if (!op.test && (!op.notified || op.already_shown))
+      return;
+
   op.setCookie = function (hours) {
     document.cookie = 'browserupdateorg=pause; expires=' + (new Date(new Date().getTime() + 3600000 * hours)).toGMTString() + '; path=/; SameSite=None; Secure';
   };
