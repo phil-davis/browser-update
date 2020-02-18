@@ -434,11 +434,6 @@ var $buo_show = function () {
     return data;
   }
 
-  op.already_shown = document.cookie.indexOf("browserupdateorg=pause") > -1;
-
-  if (!op.test && (!op.notified || op.already_shown))
-      return;
-
   op.setCookie = function (hours) {
     document.cookie = 'browserupdateorg=pause; expires=' + (new Date(new Date().getTime() + 3600000 * hours)).toGMTString() + '; path=/; SameSite=None; Secure';
   };
