@@ -61,7 +61,7 @@ See the [available options](http://browser-update.org/customize.html) to see how
 * Unobtrusive
     * We take care not to  erroneously notify users by constantly tweaking the detection code
     * users of small niche browsers and users who have no possibility to update are not notified
-    * We do not block the users form using a website in any way
+    * We do not block the users from using a website in any way
     * The website can be used without taking additional steps
     * The notification will only appear once a day by default
     * If the user **activly** closes the notification, it will reappear after a week
